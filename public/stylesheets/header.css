@@ -1,0 +1,50 @@
+/* GLOBAL CSS */ 
+html{
+    font-size: 20px;
+}
+
+
+/* END GLOBAL CSS */
+
+/* HEADER CSS */
+.myNavBar{
+    border-bottom: 1px solid rgb(226, 226, 226);    
+}
+.myNavBar .navbar-brand img{    
+    width: 3rem;
+    height: 3rem;
+}
+
+.myNavBar .insta-header img{    
+   height: 3rem;
+   width: 8rem;
+}
+
+.myNavBar .input__search{
+    width: 100%;        
+}
+
+
+.myNavBar .input__search .input-group .input-group-text:hover{
+    background-color: #7986cb;
+    cursor: pointer;
+}
+
+
+.buttonControl a{
+    font-size: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-middle{
+    text-align: center;
+}
+
+.navbar-right{
+    text-align: right;
+}
+
+/* END HEADER CSS */

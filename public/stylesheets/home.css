@@ -1,0 +1,161 @@
+/* GLOBAL CSS */ 
+html{
+    font-size: 20px;
+}
+
+
+/* END GLOBAL CSS */
+
+/* HEADER CSS */
+.myNavBar{
+    border-bottom: 1px solid rgb(226, 226, 226);    
+}
+.myNavBar .navbar-brand img{    
+    width: 3rem;
+    height: 3rem;
+}
+
+.myNavBar .insta-header img{    
+   height: 3rem;
+   width: 8rem;
+}
+
+.myNavBar .input__search{
+    width: 100%;        
+}
+
+
+.myNavBar .input__search .input-group .input-group-text:hover{
+    background-color: #7986cb;
+    cursor: pointer;
+}
+
+
+.buttonControl a{
+    font-size: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-middle{
+    text-align: center;
+}
+
+.navbar-right{
+    text-align: right;
+}
+
+/* END HEADER CSS */
+
+/* USER POST CSS */
+.form-group{
+    margin-bottom: 0 !important;
+}
+
+.content{
+    margin-bottom: 3rem !important;
+}
+
+.user-post .content{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid rgb(226, 226, 226);
+}
+.user-post .content .user-infor{
+    padding: 0.5rem 0; 
+}
+
+
+.user-post .content .user-infor img{
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 0.5rem;
+}
+
+.user-post .content .user-infor span{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.user-post .content .user-infor a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.user-post .content .picture{
+    max-width: 800px;
+    max-height: 600px;
+    overflow: hidden;    
+    position: relative;   
+    margin: auto 0;
+}
+
+.user-post .content .picture img{  
+     
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.user-post .content .post-infor {
+    margin: 0 1rem;
+}
+
+.user-post .content .post-infor .post-infor-first i{    
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;    
+}
+
+.user-post .content .post-infor .post-infor-first p{
+    font-size: 0.8rem;
+    font-size: 600;    
+    margin: 0;
+}
+.user-post .content .post-infor .post-infor-first span{
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-right: 0.5rem;
+}
+
+.user-post .content .post-infor .comment{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.user-post .content .post-infor .comment p:last-child{
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: gray;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+}
+
+.user-post .content .post-infor .comment > span{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(173, 173, 173);
+    cursor: pointer;
+}
+
+.user-post .content .post-infor .comment p{
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: 400;
+    
+}
+
+.user-post .content .post-infor .comment span{
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-right: 0.5rem;
+}
+/* END USER POST CSS */
