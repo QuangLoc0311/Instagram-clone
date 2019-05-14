@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <title>Instagram</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/personalpage.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header myNavBar">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <div class="col-xl-4">
+                    <div class="row">
+                        <a class="navbar-brand" href="/photos/new">
+                            <img src="../image/insta logo.png " alt="">
+                        </a>
+                        <a class="insta-header" href="/">
+                            <img src="../image/instagram header.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-4 navbar-middle">
+                    <div class="input__search">
+                        <form action="/search" method="GET">
+                            <div class="input-group">
+                                <input name="name" type="text" class="form-control" placeholder="Search">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-4 navbar-right">
+                    <div class="buttonControl">
+                        <a class="fa fa-compass" href="#" ></a>
+                        <a class="fa fa-heart-o" href="#" ></a>
+                        <a class="fa fa-user-o" href="/users/<%= currentUser._id %>"></a>
+                        <a class="fa fa-sign-out" href="/logout"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- END HEADER -->
+
+    <!-- USER -->
+    <section class="user">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="avatarUserControl">
+                        <img class="img-circle" src="<%= user.avatar %>" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="firstUserControl">
+                        <span><%= user.username %></span>
+                        <% if(isFollow === null) { %>
+                            <a href="/users/<%= currentUser._id %>/edit">
+                                <button type="button" class="settingButtonControl btn btn-light">
+                                  Edit profile
+                                  <i class="fa fa-cog"></i>
+                                </button>
+                            </a>
+                        <% } else { %>
+                          <% if(isFollow) {%>
+                            <button type="button" id="followBtn" class="btn btn-light">
+                              Unfollow
+                            </button>
+                          <% } else { %>
+                            <button type="button" id="followBtn" class="btn btn-primary">
+                              Follow
+                            </button>
+                          <% } %>
+                        <% } %>
+
+                    </div>
+                    <div class="secondUserControl">
+                        <div class="row">
+                            <div class="posts">
+                                <span><%= user.photos.length%></span>
+                                posts
+                            </div>
+
+                            <div class="followers">
+                                <a style="color:black; text-decoration: none;" href="/users/<%= currentUser._id %>/follow" >
+                                    <span><%= followerList.length %></span>
+                                    followers
+                                </a>
+                            </div>
+                            <div class="following">
+                                <a style="color:black; text-decoration: none;" href="/users/<%= currentUser._id %>/follow" >
+                                    <span><%= followeeList.length %></span>
+                                    following
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thirdUserControl">
+                        <div class="userName"><%= user.fullname%></div>
+                        <div class="bio"><%= user.description %></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END USER -->
+    <!-- PHOTO -->
+    <section class="photo">
+        <div class="container">
+                <div class="photoList">
+                     <% user.photos.forEach(function(photo){ console.log(photo); %>
+                        <a  href="/photos/<%= photo._id %>" >
+                            <div class="photo-item photo-item">
+                                <div class="photo-info">
+                                    <span><i class="fa fa-heart"></i> 19</span>
+                                    <p><i class="fa fa-comment"></i> 0</p>
+                                </div>
+                                <img src="<%=photo.image%>" class="photo-image" alt="">
+                            </div>
+                        </a>
+                    <% }); %>
+                </div>
+        </div>
+    </section>
+    <!-- END PHOTO -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/javascripts/personalpage.js"></script>
+</body>
+
+</html>
