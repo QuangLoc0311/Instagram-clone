@@ -1,0 +1,86 @@
+/* GLOBAL CSS */ 
+html{
+    font-size: 20px;
+}
+
+
+/* END GLOBAL CSS */
+
+/* HEADER CSS */
+.myNavBar{
+    border-bottom: 1px solid rgb(226, 226, 226);    
+}
+.myNavBar .navbar-brand img{    
+    width: 3rem;
+    height: 3rem;
+}
+
+.myNavBar .insta-header img{    
+   height: 3rem;
+   width: 8rem;
+}
+
+.myNavBar .input__search{
+    width: 100%;        
+}
+
+
+.myNavBar .input__search .input-group .input-group-text:hover{
+    background-color: #7986cb;
+    cursor: pointer;
+}
+
+
+.buttonControl a{
+    font-size: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-middle{
+    text-align: center;
+}
+
+.navbar-right{
+    text-align: right;
+}
+
+/* END HEADER CSS */
+
+/* SHOW FOLLOW CSS */
+
+.showFollow .followers .followList .followItem{
+    margin-bottom: 0.5rem;
+}
+
+.showFollow .followers .followList .followItem img{
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;    
+    float: left;
+    margin-right: 0.5rem;
+    
+}
+
+.showFollow .followers .followList .followItem .followInfor{
+    display: inline;
+}
+
+.showFollow .followers .followList .followItem .followInfor p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: -0.4rem;
+}
+.showFollow .followers .followList .followItem .followInfor span{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: gray;
+}
+
+.showFollow .followers .followList .followItem .followButton{
+    float: right;
+    margin-top: -0.8rem;
+}
+/* END SHOW FOLLOW CSS */

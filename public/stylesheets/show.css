@@ -1,0 +1,148 @@
+/* GLOBAL CSS */ 
+html{
+    font-size: 20px;
+}
+
+
+/* END GLOBAL CSS */
+
+/* HEADER CSS */
+.myNavBar{
+    border-bottom: 1px solid rgb(226, 226, 226);    
+}
+.myNavBar .navbar-brand img{    
+    width: 3rem;
+    height: 3rem;
+}
+
+.myNavBar .insta-header img{    
+   height: 3rem;
+   width: 8rem;
+}
+
+.myNavBar .input__search{
+    width: 100%;        
+}
+
+
+.myNavBar .input__search .input-group .input-group-text:hover{
+    background-color: #7986cb;
+    cursor: pointer;
+}
+
+
+.buttonControl i{
+    font-size: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.buttonControl a{
+    font-size: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-middle{
+    text-align: center;
+}
+
+.navbar-right{
+    text-align: right;
+}
+
+/* END HEADER CSS */
+.infor{
+    position: relative;
+}
+.content{
+    margin: 2rem;
+    padding-right: -5rem;
+    
+}
+.content .container{
+    border: 1px solid rgb(226, 226, 226);
+}
+.content .picture{
+    max-width: 700px;
+    max-height: 600px;
+    overflow: hidden;    
+    position: relative;   
+    margin: auto 0;
+    
+}
+.content .picture img{
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.content .infor-post{
+    border-bottom: 1px solid rgb(226, 226, 226);
+    padding-bottom: 1rem;
+}
+.content .infor-user{
+    margin-top: 1rem;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    padding-bottom: 1rem;
+}
+
+.content .infor-user img {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.content .infor-user span{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.content .infor-user a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.content .infor-post #user-name{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.content .infor-post span{
+    font-size: 0.7rem;
+    word-spacing: 0px;     
+}
+
+/* .infor-more{
+    position: absolute;
+    bottom: -1rem;
+} */
+
+.infor-more{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.infor-more i{
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.infor-more p{ 
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: -0.5rem;
+}
+
+.infor-more span{
+    font-size: 0.5rem;   
+}
+
+.comment-section textarea{
+    resize: none;
+}
